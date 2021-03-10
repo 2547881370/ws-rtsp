@@ -1,0 +1,17 @@
+<html>
+
+<body>
+  <button onclick="player()">播放</button>
+  <canvas id="canvas"></canvas>
+</body>
+
+<script type="text/javascript" src="./js/jsmpeg.min.js"></script>
+<script type="text/javascript">
+  function player() {
+    new JSMpeg.Player('ws://localhost:8080/flv?url=cnRzcDovL2FkbWluOjEyMzQ1NmFhQDE3Mi4xNi4xLjcwL1N0cmVhbWluZy9DaGFubmVscy8xMDE=&channelid=2', {
+      canvas: document.getElementById('canvas'),// Canvas should be a canvas DOM element
+    })
+  }
+</script>
+
+</html>
