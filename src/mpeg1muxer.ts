@@ -5,7 +5,7 @@ import * as util from "util"
 
 import * as events from "events"
 
-Mpeg1Muxer = function(options) {
+Mpeg1Muxer = function (options) {
   var key
   this.url = options.url
   this.ffmpegOptions = options.ffmpegOptions
@@ -20,6 +20,7 @@ Mpeg1Muxer = function(options) {
     }
   }
   this.spawnOptions = [
+    "-rtsp_transport", "tcp", "-thread_queue_size", "512",
     "-i",
     this.url,
     '-f',

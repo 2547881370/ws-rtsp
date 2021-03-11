@@ -8,4 +8,4 @@ var server = http.createServer(function (req, res) {
     res.end()
 });
 new rtsp.StreamingMediaServer(server);
-server.listen(8080);
+server.listen(8081);

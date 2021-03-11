@@ -4,7 +4,7 @@ import * as SocketIO from 'socket.io';
 import { Server } from 'http';
 import * as WS from 'ws'
 import * as urlib from "url"
-import * as atob from "atob"
+import {decode} from 'base-64'
 
 interface IParamsQuery {
     query: {
@@ -41,7 +41,7 @@ export class StreamingMediaServer {
             // 注册视频通道
             if (params.query.channelid && params.query.url) {
                 const channelid = params.query.channelid
-                const url = atob((params.query.url.toString()))
+                const url = decode((params.query.url.toString()))
                 this.onStart(socket, JSON.stringify({
                     channelid: channelid,
                     url: url

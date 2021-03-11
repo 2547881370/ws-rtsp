@@ -8,11 +8,11 @@
   "scripts": {
     "build": "tsc",
     "serve": "node ./sample/index.js",
-    "pm2" : "pm2 start --name flv ./sample/index.js",
-    "stop" : "pm2 stop flv",
-    "delete" : "pm2 delete flv",
-    "start" : "pm2 start flv",
-    "restart" : "(pm2 stop flv) & (pm2 delete flv) & (pm2 start --name flv ./sample/index.js)"
+    "pm2": "pm2 start --name flv ./sample/index.js",
+    "stop": "pm2 stop flv",
+    "delete": "pm2 delete flv",
+    "start": "pm2 start flv",
+    "restart": "(pm2 stop flv) & (pm2 delete flv) & (pm2 start --name flv ./sample/index.js)"
   },
   "keywords": [
     "media source extensions",
@@ -39,6 +39,7 @@
     "@types/atob": "^2.1.2",
     "@types/ws": "^7.4.0",
     "atob": "^2.1.2",
+    "base-64": "^1.0.0",
     "socket.io": "^2.1.1",
     "ws": "^7.4.4"
   }
